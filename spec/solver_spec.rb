@@ -1,7 +1,9 @@
-require './solver.rb'
+# frozen_string_literal: true
 
-describe Solver do 
-  before(:each) do 
+require './solver'
+
+describe Solver do
+  before(:each) do
     @solver = Solver.new
   end
 
@@ -9,16 +11,16 @@ describe Solver do
     it 'should return the factorial of a given number' do
       factorial = @solver.factorial(5)
       expect(factorial).to eql 120
-      expect(@solver.factorial(10)).to eql 3628800
-    end 
-    
+      expect(@solver.factorial(10)).to eql 3_628_800
+    end
+
     it 'should return the factorial of 1 for number 0' do
       factorial = @solver.factorial(0)
       expect(factorial).to eql 1
-    end 
-  
+    end
+
     it 'should raise an exception when the number is less than 0' do
-      expect { @solver.factorial(-2) }.to raise_error("Number inputted is less than 0")
+      expect { @solver.factorial(-2) }.to raise_error('Number inputted is less than 0')
     end
   end
 
@@ -34,20 +36,20 @@ describe Solver do
       string = @solver.fizzbuzz(15)
       expect(string).to eql 'fizzbuzz'
     end
-  
+
     it 'should return fizz if 9 is passed as number' do
       string = @solver.fizzbuzz(9)
       expect(string).to eql 'fizz'
     end
-  
+
     it 'should return buzz if 10 is passed as number' do
       string = @solver.fizzbuzz(10)
       expect(string).to eql 'buzz'
     end
-  
+
     it 'should return 7 as a string it is passed as number' do
       string = @solver.fizzbuzz(7)
       expect(string).to eql '7'
     end
   end
-  end
+end

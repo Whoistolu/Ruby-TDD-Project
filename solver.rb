@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 class Solver
   def factorial(n)
-    if n < 0
-      raise "Number inputted is less than 0"
-    elsif n == 0
-      return 1
-    else 
+    if n.negative?
+      raise 'Number inputted is less than 0'
+    elsif n.zero?
+      1
+    else
       product = 1
-      for i in 1..n do
+      (1..n).each do |i|
         product *= i
       end
       product
@@ -18,13 +20,14 @@ class Solver
   end
 
   def fizzbuzz(number)
-    if number % 3 == 0 && number % 5 == 0
-      return 'fizzbuzz'
-    elsif number % 3 == 0
-        return 'fizz'
-    elsif number % 5 == 0
-          return 'buzz'
-    else number.to_s
+    if (number % 3).zero? && (number % 5).zero?
+      'fizzbuzz'
+    elsif (number % 3).zero?
+      'fizz'
+    elsif (number % 5).zero?
+      'buzz'
+    else
+      number.to_s
     end
   end
 end
