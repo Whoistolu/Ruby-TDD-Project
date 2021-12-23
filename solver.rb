@@ -1,18 +1,13 @@
-# frozen_string_literal: true
-
 class Solver
-  def factorial(n)
-    if n.negative?
-      raise 'Number inputted is less than 0'
-    elsif n.zero?
-      1
-    else
-      product = 1
-      (1..n).each do |i|
-        product *= i
-      end
-      product
+  def factorial(num)
+    raise 'Number inputted is less than 0' if num.negative?
+    return 1 if num.zero?
+
+    product = 1
+    (1..num).each do |i|
+      product *= i
     end
+    product
   end
 
   def reverse(string)
