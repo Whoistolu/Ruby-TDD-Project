@@ -2,11 +2,6 @@
 Test-Driven Development (TDD)
 The idea is to write tests first and then the code. Implemeting a class with some methods. 
 
-## Screenshots
-
-> |Screenshot1|Screenshots2|
-> |--------------|----------------|
-> |![screenshot]()
 
 
 ## Built With
